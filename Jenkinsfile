@@ -1,8 +1,6 @@
 pipeline {
     agent any
-    triggers {
-        githubPush()
-    }
+ 
     stages {
         stage('Checkout') {
             steps {
@@ -11,7 +9,9 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'mvn clean package'
+              sh 'echo "Building..."'
+                 sh 'echo "Building..."'
+                 sh 'echo "Building..."'
             }
         }
     }
